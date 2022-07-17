@@ -14,7 +14,18 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
 <body>
-
+<div class="container">
+    <div class="sidebar">
+        Logo
+    </div>
+    <div class="content">
+        <nav>
+            <a href="#" class="btn btn-primary">
+                Criar Tarefa
+            </a>
+        </nav>
+    </div>
+</div>
 
 </body>
 </html>
