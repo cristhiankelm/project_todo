@@ -24,6 +24,19 @@
                 Criar Tarefa
             </a>
         </nav>
+        <main>
+            <section class="graph">
+                <div class="graph_header">
+                    <h2>Progresso do dia</h2>
+                    <hr class="LinhaHeader"/>
+                    Data
+                </div>
+                <div class="graph_header_subtitle"> Tarefas: <b>3/6</b></div>
+            </section>
+            <section class="list">
+                Lista
+            </section>
+        </main>
     </div>
 </div>
 
