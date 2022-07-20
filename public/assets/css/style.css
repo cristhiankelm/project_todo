@@ -62,6 +62,7 @@ main {
 section.graph {
     width: 33%;
     height: 100%;
+    padding: 5px;
 }
 
 .graph_header {
@@ -75,11 +76,87 @@ h2 {
 }
 
 hr.LinhaHeader {
-    flex: 1;
-    width: 50px;
-    display: inline-block;
+    width: 130px;
 }
 
 .graph_header_subtitle {
     margin-top: 10px;
+}
+
+.graph-placeholder {
+    background-color: #ccc;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.graph_header_tasks_left {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.list {
+    padding: 5px 15px;
+    flex: 1;
+}
+
+.list_header {
+    display: flex;
+}
+
+.list_header_select {
+
+}
+
+.task_list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--backgound-light);
+}
+
+.task:hover {
+    background-color: var(--backgound-light);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.priority, .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sphere {
+    width: 22px;
+    height: 22px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.task_title {
+    padding-left: 10px;
+    font-weight: bold;
 }
