@@ -26,7 +26,7 @@
         </nav>
         <main>
             <section class="graph">
-                <div class="graph_header">
+                <div className="graph_header">
                     <h2>Progresso do dia</h2>
                     <hr class="LinhaHeader"/>
                     Data
