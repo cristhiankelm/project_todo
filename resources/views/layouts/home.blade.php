@@ -29,7 +29,11 @@
                 <div class="graph_header">
                     <h2>Progresso do dia</h2>
                     <div class="graph_header_line"></div>
-                    <div class="graph_header_date">Data</div>
+                    <div class="graph_header_date">
+                        <img src="/assets/images/icon-prev.png" alt="">
+                        13 dez
+                        <img src="/assets/images/icon-next.png" alt="">
+                    </div>
                 </div>
                 <div class="graph_header_subtitle"> Tarefas: <b>3/6</b></div>
 
@@ -40,11 +44,11 @@
                     <img src="/assets/images/icon-info.png" alt="">
                     Restam 3 tarefas para serem realizadas
                 </div>
-
             </section>
+
             <section class="list">
                 <div class="list_header">
-                    <select name="" class="list_header_select" id="">
+                    <select name="" class="list_header_select">
                         <option value="1">Todas as tarefas</option>
                     </select>
                 </div>
