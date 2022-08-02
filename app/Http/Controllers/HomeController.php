@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\Contracts\MainRepositoryInterface;
 use App\Repositories\Contracts\UserRepositoryInterface;
-use App\Services\AbstractService;
 use App\Services\UserService;
 use Illuminate\Http\Request;
 
