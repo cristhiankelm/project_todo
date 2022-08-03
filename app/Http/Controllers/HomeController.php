@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Task;
 use App\Repositories\Contracts\UserRepositoryInterface;
 use App\Services\UserService;
 use Illuminate\Http\Request;
@@ -15,6 +16,8 @@ class HomeController extends Controller
 
     public function index(Request $request)
     {
-        return view('home');
+        $tasks = Task::all()->take(4);
+
+        return view('home', compact('tasks'));
     }
 }
