@@ -10,31 +10,19 @@
 
         <form action="">
 
-            <x-form.text_input name="title" label="Titulo da task" placeholder="Digite o titulo da sua Tarefa..."></x-form.text_input>
+            <x-form.text_input name="title" label="Titulo da task"
+                               placeholder="Digite o titulo da sua Tarefa..."></x-form.text_input>
 
             <x-form.text_input type="date" name="due_date" label="Data de Realização"></x-form.text_input>
 
+            <x-form.select_input name="category" label="Categoria">
+                <option value="">Valor qualquer</option>
+            </x-form.select_input>
 
-            <div class="input_area">
-                <label for="category">
-                    Data de Realização
-                </label>
-                <select id="category" name="category" required>
-                    <option selected disabled value="">Selecione a categoria</option>
-                    <option value="">Categoria qualquer</option>
-                </select>
-            </div>
+            <x-form.textarea_input name="description"
+                                   placeholder="Digite a descrição da tarefa"></x-form.textarea_input>
 
-            <div class="input_area">
-                <label for="description">
-                    Data de Realização
-                </label>
-                <textarea name="description" placeholder="Didite uma descrição para a sua tarefa"></textarea>
-            </div>
-
-            <div class="input_area">
-                <button type="submit" class="btn btn-primary">Criar tarefa</button>
-            </div>
+            <x-form.form_button resetTxt="Resetar" submitTxt="Criar Tarefa"></x-form.form_button>
 
         </form>
     </section>
