@@ -20,6 +20,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/task', [TaskController::class, 'index'])->name('task.index');
 Route::get('/task/new', [TaskController::class, 'create'])->name('task.create');
+Route::post('/task/create', [TaskController::class, 'store'])->name('task.store');
 Route::get('/task/edit', [TaskController::class, 'edit'])->name('task.edit');
 Route::get('/task/delete', [TaskController::class, 'delete'])->name('task.delete');
 

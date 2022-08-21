@@ -10,4 +10,9 @@ class TaskService extends AbstractService
     {
         parent::__construct($repository);
     }
+
+    public function makeTask(array $data)
+    {
+        return $this->repository->save($data);
+    }
 }
