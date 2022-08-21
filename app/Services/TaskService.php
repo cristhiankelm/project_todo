@@ -15,4 +15,10 @@ class TaskService extends AbstractService
     {
         return $this->repository->save($data);
     }
+
+    public function updateTask(array $data)
+    {
+        $data['id'] = $this->repository->findById($data['id'])->id;
+        return $this->repository->update($data);
+    }
 }

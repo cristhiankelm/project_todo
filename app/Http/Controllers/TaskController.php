@@ -22,8 +22,7 @@ class TaskController extends Controller
 
     public function create(Request $request)
     {
-        $categories = $this->taskRepository->all();
-
+        $categories = $this->model->all();
         $data['categories'] = $categories;
 
         return view('tasks.create', $data);
@@ -39,13 +38,29 @@ class TaskController extends Controller
         return to_route('task.create');
     }
 
-    public function edit(Request $request)
+    public function edit($id)
     {
-        return view('tasks.edit');
+        $task = $this->model->findById($id);
+
+        $categories = $this->model->all();
+        $data['categories'] = $categories;
+        $data['task'] = $task;
+
+        return view('tasks.edit', $data);
     }
 
-    public function delete(Request $request)
+    public function update(StoreTask $request, $id)
     {
+        $data = $request->validated();
+        $data['id'] = $id;
+        $this->service->updateTask($data);
 
+        return to_route('home');
+    }
+
+    public function destroy($id)
+    {
+        $this->model->delete($id);
+        return to_route('home');
     }
 }

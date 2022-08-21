@@ -5,7 +5,7 @@
         </a>
     </x-slot:btn>
 
-    <section id="create_task_section">
+    <section id="task_section">
         <h1>Criar Tarefa</h1>
 
         <form method="POST" action="{{ route('task.store') }}">
@@ -14,7 +14,7 @@
             <x-form.text_input name="title" label="Titulo da task"
                                placeholder="Digite o titulo da sua Tarefa..."></x-form.text_input>
 
-            <x-form.text_input type="date" name="due_date" label="Data de Realização"></x-form.text_input>
+            <x-form.text_input type="datetime-local" name="due_date" label="Data de Realização"></x-form.text_input>
 
             <x-form.select_input name="category_id" label="Categoria">
 
