@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\TaskController;
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Web\HomeController;
+use App\Http\Controllers\Web\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
