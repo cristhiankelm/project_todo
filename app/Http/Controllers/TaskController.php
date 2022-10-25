@@ -53,6 +53,8 @@ class TaskController extends Controller
     {
         $data = $request->validated();
         $data['id'] = $id;
+        $data['is_done'] = $request->is_done ? true : false;
+
         $this->service->updateTask($data);
 
         return to_route('home');
