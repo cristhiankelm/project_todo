@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
+use App\Http\Controllers\Controller;
 use App\Models\Task;
 use App\Repositories\Contracts\UserRepositoryInterface;
 use App\Services\UserService;
