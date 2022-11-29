@@ -27,3 +27,4 @@ Route::get('/task/{id}/delete', [TaskController::class, 'destroy'])->name('task.
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/register', [AuthController::class, 'registerAction'])->name('register.action');
