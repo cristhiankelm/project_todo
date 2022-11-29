@@ -20,8 +20,8 @@ class AuthMailController extends Controller
     {
         $registerEmail = new RegisterMail();
 
-        return $registerEmail;
+//        return $registerEmail;
 
-//        Mail::to('criskp007@gmail.com')->send($registerEmail);
+        Mail::to('criskp007@gmail.com')->queue($registerEmail);
     }
 }
