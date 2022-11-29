@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Task\StoreTask;
 use App\Repositories\Contracts\TaskRepositoryInterface;
 use App\Services\TaskService;
@@ -53,6 +54,8 @@ class TaskController extends Controller
     {
         $data = $request->validated();
         $data['id'] = $id;
+        $data['is_done'] = $request->is_done ? true : false;
+
         $this->service->updateTask($data);
 
         return to_route('home');

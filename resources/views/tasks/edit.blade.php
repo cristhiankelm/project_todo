@@ -16,7 +16,8 @@
                                placeholder="Digite o titulo da sua Tarefa..."
                                value="{{ $task->title }}"></x-form.text_input>
 
-            <x-form.text_input type="checkbox" name="is_done" label="Tarefa Realizada?" value="{{ $task->is_done }}"></x-form.text_input>
+            <x-form.checkbox_input name="is_done" label="Tarefa Realizada?"
+                                   checked="{{ $task->is_done }}"></x-form.checkbox_input>
 
             <x-form.text_input type="datetime-local" name="due_date" label="Data de Realização"
                                value="{{ $task->due_date }}"></x-form.text_input>
