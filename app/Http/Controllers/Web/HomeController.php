@@ -7,6 +7,7 @@ use App\Models\Task;
 use App\Repositories\Contracts\UserRepositoryInterface;
 use App\Services\UserService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -19,6 +20,8 @@ class HomeController extends Controller
     {
         $tasks = Task::all()->take(4);
 
-        return view('home', compact('tasks'));
+        $authUser = Auth::user();
+
+        return view('home', compact('tasks', 'authUser'));
     }
 }

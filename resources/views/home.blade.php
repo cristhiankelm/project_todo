@@ -8,7 +8,7 @@
 
     <section class="graph">
         <div class="graph_header">
-            <h2>Progresso do dia</h2>
+            <h2>Progresso do dia - {{ $authUser->name }}</h2>
             <div class="graph_header_line"></div>
             <div class="graph_header_date">
                 <img src="/assets/images/icon-prev.png" alt="">
