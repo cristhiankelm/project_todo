@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\RegisterUser;
+use App\Models\User;
 use App\Repositories\Contracts\AuthRepositoryInterface;
 use App\Services\AuthService;
+use Illuminate\Support\Facades\Request;
 
 class AuthController extends Controller
 {
@@ -13,13 +16,25 @@ class AuthController extends Controller
         parent::__construct($service, $model);
     }
 
-    public function index()
+    public function index(Request $request)
     {
         return view('auth.login');
     }
 
-    public function register()
+    public function register(Request $request)
     {
         return view('auth.register');
+    }
+
+    public function registerAction(RegisterUser $request)
+    {
+        $data = $request->validated();
+
+        if ($data->fails()) {
+            return 'error';
+        }
+
+//        $userCreate = User::create($data);
+//        $userCreate->save();
     }
 }
