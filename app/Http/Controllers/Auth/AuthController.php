@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\LoginUser;
 use App\Http\Requests\Auth\RegisterUser;
 use App\Models\User;
 use App\Repositories\Contracts\AuthRepositoryInterface;
@@ -19,6 +20,12 @@ class AuthController extends Controller
     public function index(Request $request)
     {
         return view('auth.login');
+    }
+
+    public function loginAction(LoginUser $request)
+    {
+        $data = $request->validated();
+        dd($data);
     }
 
     public function register(Request $request)
