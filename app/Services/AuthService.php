@@ -10,4 +10,9 @@ class AuthService extends AbstractService
     {
         parent::__construct($repository);
     }
+
+    public function makeUser(array $data)
+    {
+        return $this->repository->save($data);
+    }
 }

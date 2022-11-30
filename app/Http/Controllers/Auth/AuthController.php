@@ -30,11 +30,8 @@ class AuthController extends Controller
     {
         $data = $request->validated();
 
-        if ($data->fails()) {
-            return 'error';
-        }
+        $this->service->makeUser($data);
 
-//        $userCreate = User::create($data);
-//        $userCreate->save();
+        return to_route('register')->withErrors($data);
     }
 }

@@ -18,6 +18,7 @@
 
                 <x-form.text_input type="password" name="password" label="Sua senha" placeholder="Digite sua senha"></x-form.text_input>
 
+                <x-form.text_input type="password" name="password_confirmation" label="Confirme sua senha" placeholder="Confirme sua senha"></x-form.text_input>
 
                 <x-form.form_button resetTxt="Limpar" submitTxt="Registrar-se"></x-form.form_button>
 
