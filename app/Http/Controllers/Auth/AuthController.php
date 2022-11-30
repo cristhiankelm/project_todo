@@ -39,6 +39,6 @@ class AuthController extends Controller
 
         $this->service->makeUser($data);
 
-        return to_route('register')->withErrors($data);
+        return to_route('login');
     }
 }
