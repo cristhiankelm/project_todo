@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginUser;
 use App\Http\Requests\Auth\RegisterUser;
-use App\Models\User;
 use App\Repositories\Contracts\AuthRepositoryInterface;
 use App\Services\AuthService;
 use Illuminate\Support\Facades\Auth;
@@ -20,7 +19,9 @@ class AuthController extends Controller
 
     public function index(Request $request)
     {
-        dd(Auth::user());
+        if (Auth::check()){
+            return to_route('home');
+        }
         return view('auth.login');
     }
 
@@ -31,10 +32,15 @@ class AuthController extends Controller
         if (Auth::attempt($data)) {
             return to_route('home');
         };
+
+        return to_route('login');
     }
 
     public function register(Request $request)
     {
+        if (Auth::user()) {
+            return to_route('home');
+        }
         return view('auth.register');
     }
 
@@ -43,6 +49,13 @@ class AuthController extends Controller
         $data = $request->validated();
 
         $this->service->makeUser($data);
+
+        return to_route('login');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
 
         return to_route('login');
     }

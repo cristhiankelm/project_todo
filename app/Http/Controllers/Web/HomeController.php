@@ -20,8 +20,6 @@ class HomeController extends Controller
     {
         $tasks = Task::all()->take(4);
 
-        $authUser = Auth::user();
-
-        return view('home', compact('tasks', 'authUser'));
+        return view('home', compact('tasks'));
     }
 }
