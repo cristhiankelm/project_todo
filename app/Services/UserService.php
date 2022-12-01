@@ -11,5 +11,4 @@ class UserService extends AbstractService
         parent::__construct($repository);
     }
 
-
 }
